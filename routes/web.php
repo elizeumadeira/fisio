@@ -22,6 +22,8 @@ Route::group(['prefix' => 'v1.0'], function () {
         Route::get('open', 'AuthController@open');
         
         Route::resource('users', 'UsersController');
+        Route::resource('paciente', 'PacienteController');
+        Route::resource('users/{user}/tratamento', 'TratamentoController');
     });
 
     Route::post('login', 'AuthController@login')->name('login');
