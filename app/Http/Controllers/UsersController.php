@@ -24,6 +24,7 @@ class UsersController extends Controller
 
         if (!$User) {
             return response()->json([
+                'error' => true,
                 'message' => 'Usuario não encontrado'
             ], 404);
         }
@@ -45,6 +46,7 @@ class UsersController extends Controller
 
         if (!$User) {
             return response()->json([
+                'error' => true,
                 'message' => 'Usuario não encontrado'
             ], 404);
         }
@@ -61,6 +63,7 @@ class UsersController extends Controller
 
         if (!$User) {
             return response()->json([
+                'error' => true,
                 'message' => 'Usuario não encontrado'
             ], 404);
         }

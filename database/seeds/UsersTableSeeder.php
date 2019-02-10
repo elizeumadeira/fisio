@@ -23,11 +23,11 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Adriane Madeira',
+            'nome' => 'Adriane Madeira',
             'email' => 'adriane3@outlook.com',
             'password' => Hash::make('whatever'),
             'phone' => '3333333',
-            'gender' => 'fem',
+            'genero' => 'fem',
             'nasc' => '1994-12-31'
         ]);
     }
