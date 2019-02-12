@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+
 // use JWTAuth;
 // use Tymon\JWTAuth\Exceptions\JWTException;
 
@@ -24,8 +23,7 @@ class UsersController extends Controller
 
         if (!$User) {
             return response()->json([
-                'error' => true,
-                'message' => 'Usuario não encontrado'
+                'message' => 'Usuario não encontrado',
             ], 404);
         }
 
@@ -42,36 +40,34 @@ class UsersController extends Controller
 
     public function update(Request $request, $id)
     {
-        $User =  User::find($id);
+        $User = User::find($id);
 
         if (!$User) {
             return response()->json([
-                'error' => true,
-                'message' => 'Usuario não encontrado'
+                'message' => 'Usuario não encontrado',
             ], 404);
         }
 
         $User->fill($request->all());
         $User->save();
 
-        return  response()->json($User, 201);
+        return response()->json($User, 201);
     }
 
     public function destroy($id)
     {
-        $User =  User::find($id);
+        $User = User::find($id);
 
         if (!$User) {
             return response()->json([
-                'error' => true,
-                'message' => 'Usuario não encontrado'
+                'message' => 'Usuario não encontrado',
             ], 404);
         }
-        
+
         $User->delete();
 
         return response()->json([
-            'message' => 'Usuario excluído com sucesso'
+            'message' => 'Usuario excluído com sucesso',
         ], 200);
     }
 }

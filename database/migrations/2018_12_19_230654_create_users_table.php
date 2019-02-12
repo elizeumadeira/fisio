@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->enum('genero', ['masc', 'fem']);
             $table->date('nasc');
             $table->string('password');
+            $table->boolean('lembrar_senha')->default(false);
             // $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

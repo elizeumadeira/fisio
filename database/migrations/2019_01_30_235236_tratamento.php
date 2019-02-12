@@ -13,7 +13,7 @@ class Tratamento extends Migration
      */
     public function up()
     {
-        Schema::create('tramento', function (Blueprint $table) {
+        Schema::create('tratamento', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('paciente_id');
             $table->date('inicio')->useCurrent();
@@ -33,6 +33,6 @@ class Tratamento extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paciente');
+        Schema::dropIfExists('tratamento');
     }
 }
