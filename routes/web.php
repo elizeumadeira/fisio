@@ -22,6 +22,7 @@ Route::group(['prefix' => 'v1.0'], function () {
         Route::get('open', 'AuthController@open');
         
         Route::resource('users', 'UsersController');
+        Route::get('/dashboard', 'DashboardController@index');
         // Route::resource('paciente', 'PacienteController');
         // Route::resource('users/{user}/tratamento', 'TratamentoController');
     });
