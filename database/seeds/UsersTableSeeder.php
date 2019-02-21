@@ -19,7 +19,8 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('whatever'),
             'phone' => '1111111',
             'genero' => 'masc',
-            'nasc' => '1989-06-25'
+            'nasc' => '1989-06-25',
+            'lembrar_senha' => true
         ]);
 
         DB::table('users')->insert([
@@ -28,7 +29,8 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('whatever'),
             'phone' => '3333333',
             'genero' => 'fem',
-            'nasc' => '1994-12-31'
+            'nasc' => '1994-12-31',
+            'lembrar_senha' => true
         ]);
     }
 }
