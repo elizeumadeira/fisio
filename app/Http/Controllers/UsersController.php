@@ -40,8 +40,7 @@ class UsersController extends Controller
 
     public function update(Request $request, $id)
     {
-        $User = User::find($id);
-
+        $User = User::find($id)->first();
         if (!$User) {
             return response()->json([
                 'message' => 'Usuario não encontrado'
