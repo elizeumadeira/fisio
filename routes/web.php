@@ -21,16 +21,23 @@ Route::group(['prefix' => 'v1.0'], function () {
         Route::get('me', 'AuthController@me');
         Route::get('open', 'AuthController@open');
         
+        Route::get('/users/page', 'UsersController@get_user_pagination');
         Route::resource('users', 'UsersController');
+        
         Route::get('/dashboard', 'DashboardController@index');
         // Route::resource('paciente', 'PacienteController');
         // Route::resource('users/{user}/tratamento', 'TratamentoController');
     });
 
+    
     Route::post('login', 'AuthController@login')->name('login');
     Route::get('logout', 'AuthController@logout');
 });
 
 Route::get('/', function () {
     return redirect('v1.0');
+});
+
+Route::get('teste', function(Request $request, Response $response){
+    
 });
