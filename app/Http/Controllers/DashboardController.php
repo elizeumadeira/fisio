@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index(){
         return response()->json([
-            'users' => 2
+            'users' => \App\User::count()
         ]);
     }
 }

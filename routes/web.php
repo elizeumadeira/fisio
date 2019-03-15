@@ -22,6 +22,7 @@ Route::group(['prefix' => 'v1.0'], function () {
         Route::get('open', 'AuthController@open');
         
         Route::get('/users/page', 'UsersController@get_user_pagination');
+        Route::get('/users/{id}/tratamentos', 'TratamentoController@get_user_list');
         Route::resource('users', 'UsersController');
         
         Route::get('/dashboard', 'DashboardController@index');
@@ -39,5 +40,5 @@ Route::get('/', function () {
 });
 
 Route::get('teste', function(Request $request, Response $response){
-    
+    echo App\User::count();
 });
